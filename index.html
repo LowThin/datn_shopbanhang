@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Hanoi Riot</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-and-tablet">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--qr-hover header__navbar-item--separate"> Kính Chào Quý Khách
+
+                            <div class="header__qr"> 
+                                <img src="./assets/img/qrcode.png" alt=" QR code " class="header__qr-img">
+                                <div class="header__qrcode-apps">
+                                    <a href="" class="header__qr-link"><img src="./assets/img/apstore.png" alt="Apps Store" class="header__qr-dowload-img"></a>
+                                    <a href="" class="header__qr-link"><img src="./assets/img/gg-play.png" alt="GG Play" class="header__qr-dowload-img"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                        <span class="header__navbar-title--no-poiter" >Kết Nối</span></li>        
+                        <a href="" class="header__navbar-icon-link"><i class="header__navbar-icon fa-brands fa-facebook"></i></a>
+                        <a href="" class="header__navbar-icon-link"><i class="header__navbar-icon fa-brands fa-instagram"></i></a>                  
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
+                            <i class="header__navbar-icon far fa-bell"></i>
+                            <a href="" class="header__navbar-item-link"> Thông Báo </a>
+                            <div class="header__notify"> 
+                                <header class="header__notify-header"> <h3>Thông Báo Mới Nhận</h3></header>
+                              
+                                <ul class="header__notify-list">
+                                    <li class="notify-item notify-item--viewed">
+                                        <a href="" class=" header__notify-link">
+                                            <img src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/436580/item/goods_62_436580.jpg?width=1600&impolicy=quality_75" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Các mẫu quần được giới trẻ yêu thích</span>
+                                                <span class="header__notify-desc">Quần jean rách gối đang hot hit hiện nay</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <!-- thông báo 2 -->
+                                    <li class="notify-item notify-item--viewed">
+                                        <a href="" class=" header__notify-link">
+                                            <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/422723/item/vngoods_00_422723.jpg?width=1600&impolicy=quality_75" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Các mẫu áo Polo đang được săn đón nhất trong hè này </span>
+                                                <span class="header__notify-desc">Giá chỉ còn 375.000 (giá gốc:1.250.000 vnd)</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <!-- Thông báo 3 -->
+                                    <li class="notify-item notify-item--viewed">
+                                        <a href="" class=" header__notify-link">
+                                            <img src="https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/446997/sub/vngoods_446997_sub8.jpg?width=1600&impolicy=quality_75" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Áo sơ my dài tay đang giảm giá mạnh!</span>
+                                                <span class="header__notify-desc">Áo sơ mi được làm từ 100% vải linen tự nhiên cao cấp, độ thoáng mát cao</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <footer class="footer__notify">
+                                        <a href="" class="footer__notify-btn"> Xem Tất Cả</a>
+                                    </footer>
+                                 
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <i class="header__navbar-icon fa-solid fa-circle-question"></i>
+                            <a href="" class="header__navbar-item-link"> Trợ Giúp </a>                       
+                        </li>
+                     <!-- <li id="btn-js-signup" class="header__navbar-item  header__navbar-item--solid header__navbar-item--separate " >Đăng Ký </li> -->
+                     <!-- <li id="btn-js-signin" class="header__navbar-item header__navbar-item--solid">Đăng Nhập </li> -->
+                     <li class="header__navbar-item header__navbar-user"> 
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLo0Be-uMXYGHUjC8xpCv1InbJqiCLtkv6Xw&usqp=CAU"
+                       alt="" class="header-navbar-user-img">
+                       <span class="header__navbar-user-name">thin_nguyen</span>
+                    <ul class="header__navbar-user-menu">
+                        <li class="header__navbar-user-item">
+                            <a href="">Tài khoản của tôi</a>
+                        </li>
+                        <li class="header__navbar-user-item">
+                            <a href="">Địa chỉ của tôi</a>
+                        </li>
+                        <li class="header__navbar-user-item">
+                            <a href="">Đơn mua </a>
+                        </li>
+                        <li class="header__navbar-user-item">
+                            <a href="">Đăng xuất</a>
+                        </li>
+                    </ul>
+                     </li>
+                    </ul>
+    
+                </nav>
+                 
+                <div class="header-width-search">
+                   <label for="mobile-search-checkbox" class="header__mobile-search"><i class="fa-solid fa-magnifying-glass header__mobile-search-icon"></i></label>
+                    <div class="header__logo hide-on-tablet"><a class="header__logo-link" href=""><img class="header__logo-img " src="https://hanoiriot.com/wp-content/uploads/2020/05/logo.png" alt=""></a> </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="mobile-search-checkbox">
+                <div class="header__search">
+                    <div class="header_search-input-wrap"><input type="text" class="header__search-input" placeholder="Tìm kiếm">
+                    <!-- Search-history -->
+                    <div class="header_search-history">
+                        <h3 class="header_search-history-heading">Lịch sử tìm kiếm</h3>
+                        <ul class="heaader_search-history-list">
+                            <li class="header_search-history-item"><a href="">Kem dưỡng da</a></li>
+                            <li class="header_search-history-item"><a href="">Kem trị mụn</a></li>                       
+                        </ul>
+                         </div>
+                    </div>
+                    <div class="header__search-selection">
+                        <span class="header__search-select-label">Trong Shop <i class="header__search-select-icon fa-solid fa-chevron-down"></i> </span>
+                        <ul class="header__search-option">
+                            <li class="header__search-option-item header__search-option-item--active">
+                                <span> Trong Shop</span>
+                                <i class="fa-solid fa-check"></i>
+                            </li>
+                            <li class="header__search-option-item">
+                                <span>Ngoài Shop </span>
+                                <i class="fa-solid fa-check"></i>
+                            </li>
+                            
+                        </ul>
+                         </div>
+                    <button class="header__search-btn"><i class="fa-solid fa-magnifying-glass header__search-btn-icon"></i></button>     
+
+                </div>
+                 <!-- Cart Layout -->
+                <div class="header__cart">
+                    <div class="header__cart-wrap"><i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                        <span class="header__cart-notice">3</span>
+                        <div class="header__cart-list ">
+                            <img src="https://xn--s1-j9s.vn/assets/images/no-cart.png" alt="" class="header__cart--no-cart-img">
+                             <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                             <h4 class="header__cart-heading"> Sản phẩm đã thêm </h4>
+                             <ul class="header__cart-list-item">
+                                <li class="header__cart-item">
+                                    <img src=" https://cf.shopee.vn/file/1c5ec0ab2252022fa87503460068d44c_tn" alt="" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                      <div class="header__cart-item-head"><h5 class="header__cart-item-name">Áo POLO ngắn tay Hà Nội Riot</h5> 
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__cart-item-price">200.000đ</span>
+                                            <span class="header__cart-item-muntiply">x</span>
+                                            <span class="header__cart-item-quantity">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="header__cart-item-body">
+                                        <span class="header__cart-item-desc"> Phân Loại: XL</span>
+                                        <span class="header__cart-item-remove"> Xóa</span>
+                                    </div>
+
+                                    </div>
+                                </li>
+
+                                <li class="header__cart-item">
+                                    <img src=" https://cf.shopee.vn/file/1c5ec0ab2252022fa87503460068d44c_tn" alt="" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                      <div class="header__cart-item-head"><h5 class="header__cart-item-name">Áo POLO ngắn tay Hà Nội Riot</h5> 
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__cart-item-price">200.000đ</span>
+                                            <span class="header__cart-item-muntiply">x</span>
+                                            <span class="header__cart-item-quantity">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="header__cart-item-body">
+                                        <span class="header__cart-item-desc"> Phân Loại: XL</span>
+                                        <span class="header__cart-item-remove"> Xóa</span>
+                                    </div>
+
+                                    </div>
+                                </li>
+
+                                <li class="header__cart-item">
+                                    <img src=" https://cf.shopee.vn/file/1c5ec0ab2252022fa87503460068d44c_tn" alt="" class="header__cart-img">
+                                    <div class="header__cart-item-info">
+                                      <div class="header__cart-item-head"><h5 class="header__cart-item-name">Áo POLO ngắn tay Hà Nội Riot</h5> 
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__cart-item-price">200.000đ</span>
+                                            <span class="header__cart-item-muntiply">x</span>
+                                            <span class="header__cart-item-quantity">1</span>
+                                        </div>
+                                    </div>
+                                    <div class="header__cart-item-body">
+                                        <span class="header__cart-item-desc"> Phân Loại: XL</span>
+                                        <span class="header__cart-item-remove"> Xóa</span>
+                                    </div>
+
+                                    </div>
+                                </li>
+                             </ul>
+                             <button class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</button>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+
+            </div>
+            <ul class="header__sort-bar">
+               <li class="header__sort-item "><a href="" class="header__sort-link">Liên quan</a></li>
+               <li class="header__sort-item header__sort-item--active"><a href="" class="header__sort-link">Mới nhất</a></li>
+               <li class="header__sort-item"><a href="" class="header__sort-link">Bán chạy</a></li>
+               <li class="header__sort-item"><a href="" class="header__sort-link">Gía</a></li>   
+            </ul>
+        </header>
+        <div class="app__container">
+            <div class="grid wide">
+            <div class="row sm-gutter app__content">
+             <div class="col l-2 m-0 c c-6-0">
+                <nav class="category hide-on-mobile">
+                    <h3 class="category__heading"><i class=" category__heading-icon fa-solid fa-list"></i> Danh mục</h3>
+                    <ul class="category-list">
+                        <li class="category-item category-item--active">
+                            <a href="" class="category-item__link">Trang điểm mặt</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="" class="category-item__link">Trang điểm môi</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="" class="category-item__link">Trang điểm mắt </a>
+                        </li>
+                    </ul>
+    
+                </nav>
+             </div>
+             <div class="col l-10 m-12 c-6 c-12">
+                 <div class="home-filter hide-on-mobile-and-tablet">
+                     <span class="home-filter__label">Sắp xếp theo</span>
+                     <button class="home-filter__btn btn"> Phổ biến</button>
+                     <button class="home-filter__btn btn btn--primary"> Mới nhất</button>
+                     <button class="home-filter__btn btn"> Bán chạy</button>
+                     <div class="select-input">
+                         <span class="select-input__label">Giá</span>
+                         <i class="select-input__icon fa-solid fa-chevron-down"></i>
+                         <ul class="select-input__list">
+                             <li class="select-input__list-item">
+                                 <a href="" class="select-input__list-item-link">Giá: Thấp đến cao</a>
+                                </li>
+                             <li class="select-input__list-item">
+                                <a href="" class="select-input__list-item-link">Giá: Cao đến thấp</a>
+
+                             </li>
+                         </ul>
+                     </div>
+
+                     <div class="home-filter__page">
+                         <span class="home-filter__page-num">
+                             <span class="home-filter__page-current">1</span>/14
+                         </span>
+                         <div class="home-filter__page-control">
+                          <a href="" class="home-filter__page-btn home-filter__page-btn--disable "> <i class="fa-solid fa-chevron-left home-filter__page-icon"></i> </a>
+                          <a href="" class="home-filter__page-btn"> <i class="fa-solid fa-chevron-right home-filter__page-icon"></i> </a>
+                         </div>
+                     </div>
+ 
+                
+                
+                    </div>
+               <nav class="mobile-category">
+                <ul class="mobile-category__list">
+                    <li class="mobile-category__item"><a href="" class="mobile-category__item-link">Dụng cụ gia đình</a></li>
+                    <li class="mobile-category__item"><a href="" class="mobile-category__item-link">Dụng cụ gia đình</a></li>
+                    <li class="mobile-category__item"><a href="" class="mobile-category__item-link">Dụng cụ gia đình</a></li>
+                    <li class="mobile-category__item"><a href="" class="mobile-category__item-link">Dụng cụ gia đình</a></li>
+                    <li class="mobile-category__item"><a href="" class="mobile-category__item-link">Dụng cụ gia đình</a></li>
+                    <li class="mobile-category__item"><a href="" class="mobile-category__item-link">Dụng cụ gia đình</a></li>
+
+                </ul>
+               </nav>
+
+                 <div class="home-product">
+                    <div class="app-product row sm">
+                        <!-- Product item -->
+                        <div class="col l-2-4 m-4 c-6">
+                        <a class="home-product-item">
+                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                            <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                            <div class="home-product-item__price">
+                                <span class="home-product-item__price-old">450.000đ</span>
+                                <span class="home-product-item__price-curent">420.000đ</span>
+                                
+                            </div>
+                            <div class="home-product-item__action">
+                                <span class="home-product-item__action-like ">
+                                   
+                                        <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                        <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                    
+                                    </span>
+                              <div class="home-product-item__action-rating">
+                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                <i class=" fa-regular fa-star"></i>
+                              </div>
+                              <span class="home-product-item__sold">88 đã bán </span>
+                            </div>
+                            
+
+                          <div class="home-product-item__origin">
+
+                            <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                            <span class="home-product-item__origin-name"> Hà Nội</span>
+                          </div>
+                           <div class="home-product-item__favourite">
+                            <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                            <span>Yêu thích</span>
+                           </div>
+                           <div class="home-product-item__sale-off">
+                               <span class="home-product-item__sale-off-percent">43%</span>
+                               <span class="home-product-item__sale-off-label">GIẢM</span>
+                           </div>
+
+                           
+
+                        </a>
+                        </div>
+                        <div class="col l-2-4 m-4 c-6">
+                        <a class="home-product-item">
+                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                            <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                            <div class="home-product-item__price">
+                                <span class="home-product-item__price-old">450.000đ</span>
+                                <span class="home-product-item__price-curent">420.000đ</span>
+                                
+                            </div>
+                            <div class="home-product-item__action">
+                                <span class="home-product-item__action-like ">
+                                   
+                                        <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                        <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                    
+                                    </span>
+                              <div class="home-product-item__action-rating">
+                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                <i class=" fa-regular fa-star"></i>
+                              </div>
+                              <span class="home-product-item__sold">88 đã bán </span>
+                            </div>
+                            
+
+                          <div class="home-product-item__origin">
+
+                            <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                            <span class="home-product-item__origin-name"> Hà Nội</span>
+                          </div>
+                           <div class="home-product-item__favourite">
+                            <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                            <span>Yêu thích</span>
+                           </div>
+                           <div class="home-product-item__sale-off">
+                               <span class="home-product-item__sale-off-percent">43%</span>
+                               <span class="home-product-item__sale-off-label">GIẢM</span>
+                           </div>
+
+                           
+
+                        </a>
+                        </div>
+                        <div class="col l-2-4 m-4 c-6">
+                            <a class="home-product-item">
+                                <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                                <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">450.000đ</span>
+                                    <span class="home-product-item__price-curent">420.000đ</span>
+                                    
+                                </div>
+                                <div class="home-product-item__action">
+                                    <span class="home-product-item__action-like ">
+                                       
+                                            <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                            <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                        
+                                        </span>
+                                  <div class="home-product-item__action-rating">
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class=" fa-regular fa-star"></i>
+                                  </div>
+                                  <span class="home-product-item__sold">88 đã bán </span>
+                                </div>
+                                
+    
+                              <div class="home-product-item__origin">
+    
+                                <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                                <span class="home-product-item__origin-name"> Hà Nội</span>
+                              </div>
+                               <div class="home-product-item__favourite">
+                                <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                                <span>Yêu thích</span>
+                               </div>
+                               <div class="home-product-item__sale-off">
+                                   <span class="home-product-item__sale-off-percent">43%</span>
+                                   <span class="home-product-item__sale-off-label">GIẢM</span>
+                               </div>
+    
+                               
+    
+                            </a>
+                         </div>
+                        <div class="col l-2-4 m-4 c-6">
+                                <a class="home-product-item">
+                                    <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                                    <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">450.000đ</span>
+                                        <span class="home-product-item__price-curent">420.000đ</span>
+                                        
+                                    </div>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__action-like ">
+                                           
+                                                <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                                <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                            
+                                            </span>
+                                      <div class="home-product-item__action-rating">
+                                        <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                        <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                        <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                        <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                        <i class=" fa-regular fa-star"></i>
+                                      </div>
+                                      <span class="home-product-item__sold">88 đã bán </span>
+                                    </div>
+                                    
+        
+                                  <div class="home-product-item__origin">
+        
+                                    <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                                    <span class="home-product-item__origin-name"> Hà Nội</span>
+                                  </div>
+                                   <div class="home-product-item__favourite">
+                                    <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                   </div>
+                                   <div class="home-product-item__sale-off">
+                                       <span class="home-product-item__sale-off-percent">43%</span>
+                                       <span class="home-product-item__sale-off-label">GIẢM</span>
+                                   </div>
+        
+                                   
+        
+                                </a>
+                        </div>
+                        <div class="col l-2-4 m-4 c-6">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                                        <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">450.000đ</span>
+                                            <span class="home-product-item__price-curent">420.000đ</span>
+                                            
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__action-like ">
+                                               
+                                                    <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                                    <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                                
+                                                </span>
+                                          <div class="home-product-item__action-rating">
+                                            <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                            <i class=" fa-regular fa-star"></i>
+                                          </div>
+                                          <span class="home-product-item__sold">88 đã bán </span>
+                                        </div>
+                                        
+            
+                                      <div class="home-product-item__origin">
+            
+                                        <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                                        <span class="home-product-item__origin-name"> Hà Nội</span>
+                                      </div>
+                                       <div class="home-product-item__favourite">
+                                        <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                                        <span>Yêu thích</span>
+                                       </div>
+                                       <div class="home-product-item__sale-off">
+                                           <span class="home-product-item__sale-off-percent">43%</span>
+                                           <span class="home-product-item__sale-off-label">GIẢM</span>
+                                       </div>
+            
+                                       
+            
+                                    </div>
+                         </div>
+                         <div class="col l-2-4 m-4 c-6">
+                            <div class="home-product-item">
+                                <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                                <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">450.000đ</span>
+                                    <span class="home-product-item__price-curent">420.000đ</span>
+                                    
+                                </div>
+                                <div class="home-product-item__action">
+                                    <span class="home-product-item__action-like ">
+                                       
+                                            <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                            <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                        
+                                        </span>
+                                  <div class="home-product-item__action-rating">
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class=" fa-regular fa-star"></i>
+                                  </div>
+                                  <span class="home-product-item__sold">88 đã bán </span>
+                                </div>
+                                
+    
+                              <div class="home-product-item__origin">
+    
+                                <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                                <span class="home-product-item__origin-name"> Hà Nội</span>
+                              </div>
+                               <div class="home-product-item__favourite">
+                                <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                                <span>Yêu thích</span>
+                               </div>
+                               <div class="home-product-item__sale-off">
+                                   <span class="home-product-item__sale-off-percent">43%</span>
+                                   <span class="home-product-item__sale-off-label">GIẢM</span>
+                               </div>
+    
+                               
+    
+                            </div>
+                        </div>
+                        <div class="col l-2-4 m-4 c-6">
+                            <div class="home-product-item">
+                                <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                                <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">450.000đ</span>
+                                    <span class="home-product-item__price-curent">420.000đ</span>
+                                    
+                                </div>
+                                <div class="home-product-item__action">
+                                    <span class="home-product-item__action-like ">
+                                       
+                                            <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                            <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                        
+                                        </span>
+                                  <div class="home-product-item__action-rating">
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                    <i class=" fa-regular fa-star"></i>
+                                  </div>
+                                  <span class="home-product-item__sold">88 đã bán </span>
+                                </div>
+                                
+    
+                              <div class="home-product-item__origin">
+    
+                                <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                                <span class="home-product-item__origin-name"> Hà Nội</span>
+                              </div>
+                               <div class="home-product-item__favourite">
+                                <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                                <span>Yêu thích</span>
+                               </div>
+                               <div class="home-product-item__sale-off">
+                                   <span class="home-product-item__sale-off-percent">43%</span>
+                                   <span class="home-product-item__sale-off-label">GIẢM</span>
+                               </div>
+    
+                               
+    
+                            </div>
+                        </div>
+                        <div class="col l-2-4 m-4 c-6">
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                                    <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">450.000đ</span>
+                                        <span class="home-product-item__price-curent">420.000đ</span>
+                                        
+                                    </div>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__action-like ">
+                                           
+                                                <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                                <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                            
+                                            </span>
+                                      <div class="home-product-item__action-rating">
+                                        <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                        <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                        <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                        <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                        <i class=" fa-regular fa-star"></i>
+                                      </div>
+                                      <span class="home-product-item__sold">88 đã bán </span>
+                                    </div>
+                                    
+        
+                                  <div class="home-product-item__origin">
+        
+                                    <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                                    <span class="home-product-item__origin-name"> Hà Nội</span>
+                                  </div>
+                                   <div class="home-product-item__favourite">
+                                    <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                   </div>
+                                   <div class="home-product-item__sale-off">
+                                       <span class="home-product-item__sale-off-percent">43%</span>
+                                       <span class="home-product-item__sale-off-label">GIẢM</span>
+                                   </div>
+        
+                                   
+        
+                                </div>
+                        </div>
+                        <div class="col l-2-4 m-4 c-6">
+                                    <div class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                                        <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">450.000đ</span>
+                                            <span class="home-product-item__price-curent">420.000đ</span>
+                                            
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__action-like ">
+                                               
+                                                    <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                                    <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                                
+                                                </span>
+                                          <div class="home-product-item__action-rating">
+                                            <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                            <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                            <i class=" fa-regular fa-star"></i>
+                                          </div>
+                                          <span class="home-product-item__sold">88 đã bán </span>
+                                        </div>
+                                        
+            
+                                      <div class="home-product-item__origin">
+            
+                                        <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                                        <span class="home-product-item__origin-name"> Hà Nội</span>
+                                      </div>
+                                       <div class="home-product-item__favourite">
+                                        <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                                        <span>Yêu thích</span>
+                                       </div>
+                                       <div class="home-product-item__sale-off">
+                                           <span class="home-product-item__sale-off-percent">43%</span>
+                                           <span class="home-product-item__sale-off-label">GIẢM</span>
+                                       </div>
+            
+                                       
+            
+                                    </div>
+                        </div>
+                        <div class="col l-2-4 m-4 c-6">
+                                        <div class="home-product-item">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/1da3127d6e1e06e507df88e1d7fa5cd7);"></div>
+                                            <h4 class="home-product-item__name">ÁO POLO ngắn tay HANOI RIOT T0158 CHAT LUONG CAO</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">450.000đ</span>
+                                                <span class="home-product-item__price-curent">420.000đ</span>
+                                                
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__action-like ">
+                                                   
+                                                        <i class="fa-regular fa-heart home-product-item__action-like-empty"></i>
+                                                        <i class="fa-solid fa-heart home-product-item__action-like-fill"></i>
+                                                    
+                                                    </span>
+                                              <div class="home-product-item__action-rating">
+                                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                                <i class="home-product-item__action-star-gold fa-solid fa-star"></i>
+                                                <i class=" fa-regular fa-star"></i>
+                                              </div>
+                                              <span class="home-product-item__sold">88 đã bán </span>
+                                            </div>
+                                            
+                
+                                          <div class="home-product-item__origin">
+                
+                                            <span class="home-product-item__origin-brand"> Hanoi Riot</span>
+                                            <span class="home-product-item__origin-name"> Hà Nội</span>
+                                          </div>
+                                           <div class="home-product-item__favourite">
+                                            <i class="home-product-item__favourite-icon fa-solid fa-check"></i>
+                                            <span>Yêu thích</span>
+                                           </div>
+                                           <div class="home-product-item__sale-off">
+                                               <span class="home-product-item__sale-off-percent">43%</span>
+                                               <span class="home-product-item__sale-off-label">GIẢM</span>
+                                           </div>
+                
+                                           
+                
+                                        </div>
+                        </div>
+                    </div>
+                 </div>
+              
+                 
+               <ul class="pagination home-product__pagination">
+
+                <li class="pagination-item">
+                    <a href="" class="pagination-item__link">
+                        <i class="pagination-item__icon fa-solid fa-chevron-left"></i>
+                    </a>
+                </li>
+                <li class="pagination-item">
+                    <a href="" class="pagination-item__link pagination-item__link--active">1</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="" class="pagination-item__link">2</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="" class="pagination-item__link">3</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="" class="pagination-item__link">4</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="" class="pagination-item__link">5</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="" class="pagination-item__link">...</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="" class="pagination-item__link">14</a>
+                </li>
+                <li class="pagination-item">
+                    <a href="" class="pagination-item__link">
+                        <i class="pagination-item__icon fa-solid fa-chevron-right"></i>
+                    </a>
+                </li>
+
+               </ul> 
+             </div>
+         </div>
+        </div>
+        </div>
+        
+
+
+        <footer class="footer">
+            <div class="grid wide">
+                <div class="row footer__content">
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Chăm sóc khách hàng </h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link"> Trung tâm trợ giúp</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link"> Tikid mall</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link"> Hướng dẫn mua hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Giới thiệu  </h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link">Giới Thiệu</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link">Điều khoản</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link">Tuyển dụng</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Theo dõi chúng tôi trên </h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link"><i class="footer__item-icon fa-brands fa-facebook"></i>
+                                Facebook
+                            </a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link"><i class="footer__item-icon fa-brands fa-instagram"></i>
+                                 Instagram
+                                </a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link" ><i class="footer__item-icon fa-brands fa-linkedin"></i> Linkedin</a>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-4 c-6">
+                        <h3 class="footer__heading">Danh mục </h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link">Trang điểm mặt </a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link">Trang điểm môi</a></li>
+                            <li class="footer__list-item"><a href="" class="footer__list-item-link">Trang điểm mắt</a></li>
+                        </ul>
+                    </div>
+                    <div class="col l-2-4 m-8 c-12">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="footer__dowload">
+                            <img src="./assets/img/qrcode.png" alt=" QR code " class="footer__qr-img">
+                            <div class="footer__dowload-apps">
+                                <a href="" class="footer__dowload-app-link">
+                                    <img src="./assets/img/apstore.png" alt="dowload in appstore" class="footer__dowload-app-img">
+                                </a>
+                                <a href="" class="footer__dowload-app-link">
+                                    <img src="./assets/img/gg-play.png" alt="dowload in gg play" class="footer__dowload-app-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> 
+            <div class="footer__bottom">
+                <div class="grid wide">
+                    <p class="footer__text"> @2022 - Bản quyền thuộc về Hannoi Riot</p>
+                </div>
+            </div>
+
+        </footer>
+
+
+
+
+
+
+<!-- Modal layout -->
+
+</div>
+<div class="modal">
+    <div class="modal__overlay"> </div>
+        <div id="js-modal-body" class="modal__body">
+                <div class="modal__inner">
+                    <!-- Form Đăng Ký  -->
+                     <div class="auth-form modal-signup">
+                         <div class="auth-form__container">
+                            <div class="auth-form__header">
+    
+                                <h3   class="auth-form__heading ">Đăng Ký </h3>
+                                <a  id="btn-js-signin"class="auth-form__switch-btn"> Đăng Nhập</a>           
+                            </div>
+        
+                            <div class="auth-form__form">
+        
+                                <div class="auth-form__group"> 
+                                    <input type="email" class="auth-form__input" placeholder="Email">
+                                    
+                                </div>
+                                <div class="auth-form__group"> 
+                                    <input type="password" class="auth-form__input" placeholder="Mật Khẩu ">
+                                    
+                                </div>
+                                <div class="auth-form__group"> 
+                                    <input type="password" class="auth-form__input" placeholder="Nhập Lại Mật Khẩu ">
+                                    
+                                </div>
+                                <div class="auth-form__aside">
+                                    <p class="auth-form__policy-text">Bằng việc đăng kí bạn đã bằng lòng về 
+                                        <a href=" " class="auth-form__text-link"> Điều khoản dịch vụ </a>&
+                                         <a href=" " class="auth-form__text-link"> Chính sách bảo mật </a>
+                                    </p>
+                    
+                                </div>
+                         </div>                                
+                            <div class="auth-form__controls">
+                                <button class="btn auth-form__control-back">TRỞ LẠI </button>
+                                <button class="btn btn--primary">ĐĂNG KÝ </button>
+                            </div>
+    
+                            
+                        </div>
+                        <div class="auth-form__socials"> 
+                            <a href="" class="btn btn--size-s btn--with-icon-facebook">
+                                <i class="fa-brands fa-facebook"></i> Kết Nối Với Facebook                          
+                            </a>
+                            <a href="" class="btn btn--size-s btn--with-icon-google">
+                                <i class="fa-brands fa-google"></i> Kết Nối Với Google                              
+                            </a>
+                        </div>
+                     </div>
+    
+                    
+                      <!-- Form Đăng Nhập  -->
+                     <div class="auth-form modal-signin">
+                        <div class="auth-form__container">
+                           <div class="auth-form__header">
+    
+                               <h3 class="auth-form__heading">Đăng Nhập </h3>
+                               <span id="#btn-js-signup" class="auth-form__switch-btn"> Đăng Ký</span>           
+                           </div>
+       
+                           <div class="auth-form__form">
+       
+                               <div class="auth-form__group"> 
+                                   <input type="email" class="auth-form__input" placeholder="Email">
+                                   
+                               </div>
+                               <div class="auth-form__group"> 
+                                   <input type="password" class="auth-form__input" placeholder="Mật Khẩu ">
+                                   
+                               </div>
+                              
+                               <div class="auth-form__aside">
+                                   <div class="auth-form__help">
+                                       <a href="" class="auth-form__help-link auth-form__help-forgot "> Quên mật khẩu </a>
+                                       <span class="auth-form__help-separate"></span>
+                                      
+                                       <a href="" class="auth-form__help-link"> Cần trợ giúp?</a>
+                                   </div>
+                               </div>
+                               <div class="auth-form__controls">
+                                   <button class="btn auth-form__control-back">TRỞ LẠI </button>
+                                   <button class="btn btn--primary">ĐĂNG NHẬP </button>
+                               </div>
+                      
+                        </div>  
+                                                   
+
+                        </div> 
+                        <div class="auth-form__socials"> 
+                            <a href="" class="btn btn--size-s btn--with-icon-facebook">
+                                <i class="fa-brands fa-facebook"></i> Kết Nối Với Facebook                          
+                            </a>
+                            <a href="" class="btn btn--size-s btn--with-icon-google">
+                                <i class="fa-brands fa-google"></i> Kết Nối Với Google                              
+                            </a>
+                        </div>  
+                       </div>
+                    </div>   
+                                      
+        </div>      
+   </div>    
+ </div>
+</body>
+</html>
+<script>   
+    function showformsingup()
+    {
+        
+         modal1.classList.add('open')
+         modal2.classList.add('open')
+         modal3.classList.remove('open')
+    }
+    function  showformsingin()
+    {
+        modal1.classList.add('open')
+        modal3.classList.add('open')
+        modal2.classList.remove('open')  
+    }
+    function closemodal()
+    {
+        modal1.classList.remove('open')
+       
+    }
+    const opensingups = document.querySelector('#btn-js-signup')
+    const opensingins = document.querySelector('#btn-js-signin')
+    const modal1 = document.querySelector('.modal')
+    const modal2 = document.querySelector('.modal-signup')
+    const modal3 = document.querySelector('.modal-signin')
+    
+    const modal_container = document.querySelector('#js-modal-body')
+    opensingups.addEventListener('click',showformsingup);
+    opensingins.addEventListener('click',showformsingin)
+    modal1.addEventListener('click',closemodal);
+
+
+    modal_container.addEventListener('click',function(event)
+    {
+        event.stopPropagation()
+    })      
+</script>
+
+<script>
+    
+    const $ = document.querySelector.bind(document)
+     let likeElement = $(".home-product-item__action-like");
+    likeElement.onclick = function(){
+    
+     if(this.classList.contains("home-product-item__action-like--liked")){
+       this.classList.remove("home-product-item__action-like--liked") 
+    }
+    else {
+        this.classList.add("home-product-item__action-like--liked") 
+    }
+ }
+
+</script>
